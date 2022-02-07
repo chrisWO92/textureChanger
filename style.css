@@ -1,0 +1,74 @@
+body {
+    box-sizing: border-box;
+    background: linear-gradient(rgb(61, 60, 60),grey);
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.container {
+    display: inline-flex;
+    padding: 30px;
+    background-color: rgb(138, 138, 138);
+    gap: 30px;
+    margin: 30px 30px 0px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.container > div {
+    width: 150px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container > div:hover {
+    opacity: 0.4;
+}
+
+.texture-viewer {
+    background: linear-gradient(rgb(48, 46, 46),rgb(255, 254, 254));
+    width: 600px;
+    height: 300px;
+    margin: 30px 34px;
+    border: none;
+    outline: 4px dashed rgb(51, 50, 50);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(100, 97, 97);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.texture-1 {
+    background-image: url("/sources/texture-1.jpg");
+    background-size: cover;
+}
+
+.texture-2 {
+    background-image: url("/sources/texture-2.jpg");
+    background-size: cover;
+}
+
+.texture-3 {
+    background-image: url("/sources/texture-3.jpg");
+    background-size: cover;
+}
+
+.text {
+    width: 600px;
+    height: 50px;
+    background-color: rgb(14, 13, 13);
+    margin: 60px 30px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
