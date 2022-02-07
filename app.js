@@ -10,21 +10,21 @@ let backGround3 = `url("/sources/texture-3.jpg")`;
 
 
 texture1.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text-plain", backGround1);
+    e.dataTransfer.setData("texture", backGround1);
     text.textContent = `Has seleccionado a Itachi ! <3`;
     text.style.fontSize = `2rem`;
     textureViewer.textContent = "";
 });
 
 texture2.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text-plain", backGround2);
+    e.dataTransfer.setData("texture", backGround2);
     text.textContent = `Has seleccionado a Eren ! :S`;
     text.style.fontSize = `2rem`;
     textureViewer.textContent = "";
 });
 
 texture3.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text-plain", backGround3);
+    e.dataTransfer.setData("texture", backGround3);
     text.textContent = `Has seleccionado a Goku SSJ4 ! :D`;
     text.style.fontSize = `2rem`;
     textureViewer.textContent = "";
@@ -35,7 +35,12 @@ textureViewer.addEventListener("dragover", (e) => {
 });
 
 textureViewer.addEventListener("drop", (e) => {
-    let data = e.dataTransfer.getData("text-plain");
+    let data = e.dataTransfer.getData("texture");
     textureViewer.style.backgroundImage = data;
 });
 
+/*
+
+Este código se podría optimizar si se usara un for para iterar sobre los 3 divs que tienen las texturas, para asignarle a cada uno la función para cambiar la textura, pero definiendo esa función a parte, fuera del ciclo for, y estableciendo los selectores dependientes del iterador del for, y construidor a través de template strings: `texture-${i}`.
+
+*/
